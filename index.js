@@ -2,9 +2,16 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const port = 8000;
-
+const session = require('express-session');
+const passport = require('passport');
+const passportJWT = require('./config/passport-jwt-strategy');
 app.set('view engine', 'ejs'); 
 app.set('views', path.join(__dirname, 'views'));
+
+app.use(express.urlencoded());
+app.use(cookieParser());
+
+
 
 
 app.get('/', function(req, res){
