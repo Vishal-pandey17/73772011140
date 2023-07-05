@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const port = 8000;
+const db = require('./config/mongoose');
 const session = require('express-session');
 const passport = require('passport');
 const passportJWT = require('./config/passport-jwt-strategy');
